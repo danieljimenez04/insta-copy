@@ -91,19 +91,42 @@ img {
   }
   /*=============== Header ===============*/
   .navbar{
-      display: flex;
-      justify-content:space-around;
-    }
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .profile__container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: hsl(204deg 100% 99%);
+    border-bottom: thin gray solid;
+  }
+
   .search_input{
-        display: none;
+      display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .search_input {
+      display: unset;
     }
+  }
+
   .icons{
     display: flex;
+    justify-content: space-around;
     align-items: center;
     gap: 1rem;
   }
 
-  
+  .logo h1{
+    font-size: 1rem;
+  }
 
   .profile__perfile{
     width: 20px;
@@ -150,7 +173,7 @@ img {
 }
 .container{
     display:flex; 
-    justify-content:space-evenly;
+    justify-content:space-around;
     gap:10px;
 
 }
@@ -216,11 +239,14 @@ img {
 }
 
 .post-comment{
+  margin: 1rem auto;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
 .post-comment span {
   color: lightseagreen;
 }
+
+
+/*============================ MEDIA QUERIES ============================*/
